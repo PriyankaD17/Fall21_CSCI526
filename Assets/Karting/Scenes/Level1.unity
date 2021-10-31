@@ -1555,6 +1555,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1957102644646649599, guid: ca718117a11f745b292c7dba21f42c00,
         type: 3}
+      propertyPath: boostStats.MaxTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1957102644646649599, guid: ca718117a11f745b292c7dba21f42c00,
+        type: 3}
       propertyPath: boostStats.modifiers.TopSpeed
       value: 15
       objectReference: {fileID: 0}
@@ -1591,7 +1596,7 @@ PrefabInstance:
     - target: {fileID: 1957102644646649599, guid: ca718117a11f745b292c7dba21f42c00,
         type: 3}
       propertyPath: onPowerupActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1957102644646649599, guid: ca718117a11f745b292c7dba21f42c00,
         type: 3}
@@ -3924,7 +3929,7 @@ PrefabInstance:
     - target: {fileID: 6435499550973355433, guid: 0cfd46575c9fef94e94a772755910886,
         type: 3}
       propertyPath: message
-      value: Crush All The Donuts!
+      value: Chocolate - yumm, Spinach - allergic!
       objectReference: {fileID: 0}
     - target: {fileID: 6435499550973355434, guid: 0cfd46575c9fef94e94a772755910886,
         type: 3}
@@ -3944,7 +3949,7 @@ PrefabInstance:
     - target: {fileID: 6435499550973355434, guid: 0cfd46575c9fef94e94a772755910886,
         type: 3}
       propertyPath: totalTimeInSecs
-      value: 100
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cfd46575c9fef94e94a772755910886, type: 3}
