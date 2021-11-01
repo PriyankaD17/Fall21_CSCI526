@@ -122,6 +122,11 @@ public abstract class Objective : MonoBehaviour
 
     public void UnregisterPickup(TargetObject pickupCollected)
     {
+        // add time change notification
+        if (pickupCollected.TimeGained != 0) {
+            string notificationText = "Time changed: " + pickupCollected.TimeGained;
+            m_NotificationHUDManager.CreateNotification(notificationText);
+        }
         if (pickupCollected.gameMode != gameMode) return;
 
         // removes the pickup from the list, so that we can keep track of how many are left on the map
