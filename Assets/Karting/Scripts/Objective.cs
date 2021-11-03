@@ -124,7 +124,7 @@ public abstract class Objective : MonoBehaviour
     {
         // add time change notification
         if (pickupCollected.TimeGained != 0) {
-            string notificationText = "Time changed: " + pickupCollected.TimeGained;
+            string notificationText = "You sneeze, you lose:" + pickupCollected.TimeGained + " secs";
             m_NotificationHUDManager.CreateNotification(notificationText);
         }
         if (pickupCollected.gameMode != gameMode) return;
