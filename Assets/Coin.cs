@@ -8,7 +8,7 @@ public class Coin : MonoBehaviour
 
     [SerializeField] private Magnet magnet;
     [SerializeField] private GameObject player;
-
+    public CoinManager coinManager;
     private Vector3 toDirection;
     //private float y_postn;
 
@@ -18,7 +18,7 @@ public class Coin : MonoBehaviour
         {
             magnet.coins.Remove(gameObject);
             Destroy(gameObject);
-            CoinManager.coinCount+=1;
+            coinManager.PickCoin();
         }
 
 
@@ -28,6 +28,7 @@ public class Coin : MonoBehaviour
         //y_postn = transform.position.y;
         var toPos = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
         toDirection = (toPos - transform.position).normalized;
+        coinManager = GameObject.Find("GameManager").GetComponent<CoinManager>();
     }
 
     void Update(){

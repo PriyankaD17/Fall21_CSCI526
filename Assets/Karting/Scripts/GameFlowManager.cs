@@ -160,6 +160,8 @@ public class GameFlowManager : MonoBehaviour
         endGameFadeCanvasGroup.gameObject.SetActive(true);
         if (win)
         {
+            GameObject.Find("PlayDataFactoty").GetComponent<PlayDataFactoty>().playerData.coin += 10;
+            GameObject.Find("PlayDataFactoty").GetComponent<PlayDataFactoty>().SavePlayerData();
             m_SceneToLoad = winSceneName;
             m_TimeLoadEndGameScene = Time.time + endSceneLoadDelay + delayBeforeFadeToBlack;
 
