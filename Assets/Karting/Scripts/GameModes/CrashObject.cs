@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// This class inherits from TargetObject and represents a CrashObject.
@@ -8,7 +9,7 @@ public class CrashObject : TargetObject
     [Header("CrashObject")]
     [Tooltip("The VFX prefab spawned when the object is collected")]
     public ParticleSystem CollectVFX;
-
+    public GameObject level_3_to_eat;
     [Tooltip("The position of the centerOfMass of this rigidbody")]
     public Vector3 centerOfMass;
 
@@ -30,7 +31,8 @@ public class CrashObject : TargetObject
         {
             AudioUtility.CreateSFX(CollectSound, transform.position, AudioUtility.AudioGroups.Pickup, 0f);
         }
-        
+        if(SceneManager.GetActiveScene().name == "Level3")
+            level_3_to_eat.GetComponent<Go_on_eat>().limit_eat_time = 8.0f;
         active = false;
         if (CollectVFX)
             CollectVFX.Play();
