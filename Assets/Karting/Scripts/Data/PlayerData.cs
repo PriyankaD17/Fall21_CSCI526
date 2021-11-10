@@ -15,6 +15,8 @@ public class PlayerData
 	public List<int> hats;
 	public PlayerData()
 	{
+		mySkins = new List<int>();
+		hats = new List<int>();
 		coin = 0;
 		skin = 0;
 		mySkins.Add(0);

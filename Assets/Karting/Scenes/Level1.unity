@@ -20917,6 +20917,11 @@ PrefabInstance:
       propertyPath: baseStats.ReverseAcceleration
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1659425585582038921, guid: 4cc4d7d587ac7d643bc3e6fc3823324f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5561379645021414015, guid: 4cc4d7d587ac7d643bc3e6fc3823324f,
         type: 3}
       propertyPath: baseStats.Grip
@@ -21066,6 +21071,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2805368771174309307, guid: 942c2c1bb4e544cb09d3494e89bb8041,
         type: 3}
+    - target: {fileID: 6180273174955192492, guid: 4cc4d7d587ac7d643bc3e6fc3823324f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6380781703172246156, guid: 4cc4d7d587ac7d643bc3e6fc3823324f,
         type: 3}
       propertyPath: baseStats.Grip

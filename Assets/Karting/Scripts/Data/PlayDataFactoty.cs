@@ -32,13 +32,12 @@ public class PlayDataFactoty: MonoBehaviour
 			playerData = (PlayerData)bf.Deserialize(file);
 			file.Close();
 		}
-		//Create new PlayerData
 		else
 		{
 			playerData = new PlayerData();
 		}
 	}
-
+  
 	public void SavePlayerData()
 	{
 		BinaryFormatter bf = new BinaryFormatter();

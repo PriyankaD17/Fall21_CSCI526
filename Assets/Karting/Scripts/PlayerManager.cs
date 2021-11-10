@@ -26,8 +26,11 @@ public class PlayerManager : MonoBehaviour
         }
         GameObject.Instantiate(hats[playDataFactoty.playerData.mHat], GetChild(cars[playDataFactoty.playerData.skin].transform, "HeadEND"));
 
-        virtualCamera.Follow = cars[playDataFactoty.playerData.skin].transform;
-        virtualCamera.LookAt = cars[playDataFactoty.playerData.skin].transform.Find("KartBouncingCapsule");
+        if (virtualCamera)
+        {
+            virtualCamera.Follow = cars[playDataFactoty.playerData.skin].transform;
+            virtualCamera.LookAt = cars[playDataFactoty.playerData.skin].transform.Find("KartBouncingCapsule");
+        }      
     }
 
     // Update is called once per frame
@@ -38,14 +41,12 @@ public class PlayerManager : MonoBehaviour
 
     public static Transform GetChild(Transform parentTF, string childName)
     {
-        //在子物体中查找
         Transform childTF = parentTF.Find(childName);
 
         if (childTF != null)
         {
             return childTF;
         }
-        //将问题交由子物体
         int count = parentTF.childCount;
         for (int i = 0; i < count; i++)
         {

@@ -101,12 +101,14 @@ public class ShopManager : MonoBehaviour
 
     public static Transform GetChild(Transform parentTF, string childName)
     {
+        //在子物体中查找
         Transform childTF = parentTF.Find(childName);
 
         if (childTF != null)
         {
             return childTF;
         }
+        //将问题交由子物体
         int count = parentTF.childCount;
         for (int i = 0; i < count; i++)
         {
