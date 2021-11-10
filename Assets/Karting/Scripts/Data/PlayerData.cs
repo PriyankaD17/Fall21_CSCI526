@@ -8,11 +8,11 @@ public class PlayerData
 
 	public int skin;
 
-	public List<int> mySkins;
+	public List<int> mySkins = new List<int>();
 
 	public int mHat;
 
-	public List<int> hats;
+	public List<int> hats = new List<int>();
 	public PlayerData()
 	{
 		mySkins = new List<int>();
