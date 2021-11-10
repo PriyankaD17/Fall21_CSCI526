@@ -78,6 +78,7 @@ MonoBehaviour:
   CollectSound: {fileID: 0}
   active: 0
   CollectVFX: {fileID: 7636782798213209093}
+  level_3_to_eat: {fileID: 0}
   centerOfMass: {x: 0, y: 1, z: 0}
   forceUpOnCollide: 4.5
 --- !u!54 &1694711863420321580

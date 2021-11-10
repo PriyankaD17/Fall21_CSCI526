@@ -32,7 +32,7 @@ public class CrashObject : TargetObject
             AudioUtility.CreateSFX(CollectSound, transform.position, AudioUtility.AudioGroups.Pickup, 0f);
         }
         if(SceneManager.GetActiveScene().name == "Level3")
-            level_3_to_eat.GetComponent<Go_on_eat>().limit_eat_time = 8.0f;
+            level_3_to_eat.GetComponent<Go_on_eat>().limit_eat_time = 1000.0f;
         active = false;
         if (CollectVFX)
             CollectVFX.Play();
