@@ -9,7 +9,9 @@ public class CrashObject : TargetObject
     [Header("CrashObject")]
     [Tooltip("The VFX prefab spawned when the object is collected")]
     public ParticleSystem CollectVFX;
-    public GameObject level_3_to_eat;
+    public GameObject levelObject;
+    public bool timeRushObject;
+
     [Tooltip("The position of the centerOfMass of this rigidbody")]
     public Vector3 centerOfMass;
 
@@ -31,15 +33,16 @@ public class CrashObject : TargetObject
         {
             AudioUtility.CreateSFX(CollectSound, transform.position, AudioUtility.AudioGroups.Pickup, 0f);
         }
-        if(SceneManager.GetActiveScene().name == "Level3")
-            level_3_to_eat.GetComponent<Go_on_eat>().limit_eat_time = 1000.0f;
+        if(timeRushObject)
+            levelObject.GetComponent<Go_on_eat>().limit_eat_time = 10.0f;
         active = false;
         if (CollectVFX)
             CollectVFX.Play();
                
         if (m_rigid) m_rigid.AddForce(forceUpOnCollide*Vector3.up, ForceMode.Impulse);
         
-        Objective.OnUnregisterPickup(this);
+        if (!timeRushObject)
+            Objective.OnUnregisterPickup(this);
 
         TimeManager.OnAdjustTime(TimeGained);
     }
