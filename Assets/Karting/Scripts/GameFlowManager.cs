@@ -61,7 +61,7 @@ public class GameFlowManager : MonoBehaviour
         }
 
         m_ObjectiveManager = FindObjectOfType<ObjectiveManager>();
-		DebugUtility.HandleErrorIfNullFindObject<ObjectiveManager, GameFlowManager>(m_ObjectiveManager, this);
+        DebugUtility.HandleErrorIfNullFindObject<ObjectiveManager, GameFlowManager>(m_ObjectiveManager, this);
 
         m_TimeManager = FindObjectOfType<TimeManager>();
         DebugUtility.HandleErrorIfNullFindObject<TimeManager, GameFlowManager>(m_TimeManager, this);
@@ -74,7 +74,7 @@ public class GameFlowManager : MonoBehaviour
         m_TimeManager.StopRace();
         foreach (ArcadeKart k in karts)
         {
-			k.SetCanMove(false);
+            k.SetCanMove(false);
         }
 
         //run race countdown animation
@@ -92,7 +92,7 @@ public class GameFlowManager : MonoBehaviour
     void StartRace() {
         foreach (ArcadeKart k in karts)
         {
-			k.SetCanMove(true);
+            k.SetCanMove(true);
         }
         m_TimeManager.StartRace();
     }
@@ -147,7 +147,7 @@ public class GameFlowManager : MonoBehaviour
         }
     }
 
-    void EndGame(bool win)
+    public void EndGame(bool win)
     {
         // unlocks the cursor before leaving the scene, to be able to click buttons
         Cursor.lockState = CursorLockMode.None;
@@ -160,8 +160,6 @@ public class GameFlowManager : MonoBehaviour
         endGameFadeCanvasGroup.gameObject.SetActive(true);
         if (win)
         {
-            GameObject.Find("PlayDataFactoty").GetComponent<PlayDataFactoty>().playerData.coin += 10;
-            GameObject.Find("PlayDataFactoty").GetComponent<PlayDataFactoty>().SavePlayerData();
             m_SceneToLoad = winSceneName;
             m_TimeLoadEndGameScene = Time.time + endSceneLoadDelay + delayBeforeFadeToBlack;
 
