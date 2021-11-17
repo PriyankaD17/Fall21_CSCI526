@@ -18,7 +18,8 @@ namespace KartGame.KartSystems
         {
             if (Application.platform == RuntimePlatform.Android &&
                     (new AndroidJavaClass("android.os.Build$VERSION")).GetStatic<int>("SDK_INT") >= 26)
-                vibrationSupported = true;
+                //vibrationSupported = true;
+            	return;
             else return;
 
             AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");

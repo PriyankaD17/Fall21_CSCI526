@@ -35,17 +35,10 @@ namespace KartGame.KartSystems {
         public string AccelerateButtonName = "Accelerate";
         public string BrakeButtonName = "Brake";
         private float TurnFactor = 2f;
+        public bool isMyPlayer;
 
         public override InputData GenerateInput() {
-            if (Application.platform != RuntimePlatform.Android)
-            {
-                return new InputData
-                {
-                    Accelerate = Input.GetButton(AccelerateButtonName),
-                    Brake = Input.GetButton(BrakeButtonName),
-                    TurnInput = Input.GetAxis("Horizontal")
-                };
-            } else
+            if (Application.platform == RuntimePlatform.Android && isMyPlayer)
             {
                 bool _acc = (Input.GetTouch(0).position.x > Screen.width / 2);
                 return new InputData
@@ -53,6 +46,15 @@ namespace KartGame.KartSystems {
                     Accelerate = _acc,
                     Brake = !_acc,
                     TurnInput = Mathf.Clamp(TurnFactor * Input.acceleration.normalized.x, -1f, 1f),
+                };
+                
+            } else
+            {
+                return new InputData
+                {
+                    Accelerate = Input.GetButton(AccelerateButtonName),
+                    Brake = Input.GetButton(BrakeButtonName),
+                    TurnInput = Input.GetAxis("Horizontal")
                 };
             }
         }
