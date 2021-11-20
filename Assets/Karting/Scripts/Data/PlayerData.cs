@@ -13,6 +13,8 @@ public class PlayerData
 	public int mHat;
 
 	public List<int> hats;
+
+	public int gameMode;
 	public PlayerData()
 	{
 		mySkins = new List<int>();
@@ -22,5 +24,6 @@ public class PlayerData
 		mySkins.Add(0);
 		mHat = 0;
 		hats.Add(0);
+		gameMode = 0;
 	}
 }

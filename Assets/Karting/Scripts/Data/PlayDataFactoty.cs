@@ -50,4 +50,9 @@ public class PlayDataFactoty: MonoBehaviour
 		file.Close();
 	}
 
+	public void SetGameMode(int mode)
+    {
+		playerData.gameMode = mode;
+		SavePlayerData();
+	}
 }
