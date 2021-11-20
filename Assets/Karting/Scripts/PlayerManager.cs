@@ -13,6 +13,7 @@ public class PlayerManager : MonoBehaviour
     void Start()
     {
         playDataFactoty.LoadPlayerData();
+        playDataFactoty.playerData.Rank = 0;
         for (int i = 0; i < cars.Count; i++)
         {
             cars[i].SetActive(false);

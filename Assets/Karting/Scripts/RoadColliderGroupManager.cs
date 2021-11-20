@@ -182,6 +182,7 @@ public class RoadColliderGroupManager : MonoBehaviour
                 {
                     dataFactoty.playerData.coin += 10 * muilt;
                 }
+                dataFactoty.playerData.Rank = AllPlayersRankResult.IndexOf(Player) + 1;
                 dataFactoty.SavePlayerData();
             }
 

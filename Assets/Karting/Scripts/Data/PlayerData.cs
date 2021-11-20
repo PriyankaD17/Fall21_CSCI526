@@ -26,4 +26,5 @@ public class PlayerData
 		hats.Add(0);
 		gameMode = 0;
 	}
+	public int Rank;
 }
