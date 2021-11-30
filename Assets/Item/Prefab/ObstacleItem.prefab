@@ -194,6 +194,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c8383c84e774f649a7d6b9898b7fe2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CollectVFX: {fileID: 4960693166138291444}
+  forceUpOnCollide: 4.5
+  centerOfMass: {x: 0, y: 1, z: 0}
+  CollectSound: {fileID: 8300000, guid: 93fbb109633e844259ea828442bda0cb, type: 3}
+  user: {fileID: 0}
+  icon: {fileID: 21300000, guid: 2fb3e04cb7db7cf4aa76bcb78238ca4d, type: 3}
+  active: 0
+  obstacleObj: {fileID: 5475634987318107344, guid: e2a27ffba9865324cafdbe48d2efca38,
+    type: 3}
 --- !u!1 &2479679572908121901
 GameObject:
   m_ObjectHideFlags: 0

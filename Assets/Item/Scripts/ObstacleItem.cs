@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpeedUpItem : Item
+public class ObstacleItem : Item
 {
-
+    public GameObject obstacleObj;
     public override void PickUpItem()
     {
         base.PickUpItem();
@@ -13,6 +13,6 @@ public class SpeedUpItem : Item
     public override void UseItem()
     {
         base.UseItem();
+        GameObject go = Instantiate(obstacleObj, user.transform.position + new Vector3(0,1,0) - user.transform.forward * 4, user.transform.rotation);
     }
-
 }

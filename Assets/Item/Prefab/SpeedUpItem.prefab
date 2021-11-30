@@ -194,6 +194,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbeb46edbdf18524382b495a73f22819, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CollectVFX: {fileID: 4960693166138291444}
+  forceUpOnCollide: 4.5
+  centerOfMass: {x: 0, y: 1, z: 0}
+  CollectSound: {fileID: 8300000, guid: 93fbb109633e844259ea828442bda0cb, type: 3}
+  user: {fileID: 0}
+  icon: {fileID: 21300000, guid: f496de2eafc07714b8368df0f7b26d0d, type: 3}
+  active: 0
+  boostStats:
+    modifiers:
+      TopSpeed: 15
+      Acceleration: 5
+      ReverseSpeed: 0
+      ReverseAcceleration: 0
+      AccelerationCurve: 0
+      Braking: 0
+      CoastingDrag: 0
+      Grip: 0
+      Steer: 0
+      AddedGravity: 0
+    PowerUpID: 
+    ElapsedTime: 0
+    MaxTime: 2
+  onPowerupActivated:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2479679572908121901
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,7 +281,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 8046a75a32b31594090a3ac7010928dc, type: 2}
-  - {fileID: 2100000, guid: b121577100373491d839adcc51d30452, type: 3}
+  - {fileID: 2100000, guid: 8046a75a32b31594090a3ac7010928dc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
