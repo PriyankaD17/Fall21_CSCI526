@@ -20,12 +20,18 @@ public class RandomItem : MonoBehaviour
         switch (itemType)
         {
             case 0:
+                Destroy(obstacleItem);
+                Destroy(SpeedUpItem);
                 SlowDownItem.enabled = true;
                 break;
             case 1:
+                Destroy(SlowDownItem);
+                Destroy(SpeedUpItem);
                 obstacleItem.enabled = true;
                 break;
             case 2:
+                Destroy(SlowDownItem);
+                Destroy(obstacleItem);
                 SpeedUpItem.enabled = true;
                 break;
             default:
