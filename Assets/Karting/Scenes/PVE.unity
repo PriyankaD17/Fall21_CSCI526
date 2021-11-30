@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4515345, g: 0.29632834, b: 0.4279434, a: 1}
+  m_IndirectSpecularColor: {r: 0.45278364, g: 0.2955433, b: 0.42721283, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6304,6 +6304,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 656034031224514225, guid: b26c4a65cf4c6475a92bfd03c2c3282b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 993595804331242950, guid: b26c4a65cf4c6475a92bfd03c2c3282b,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -6422,6 +6427,11 @@ PrefabInstance:
     - target: {fileID: 4583248750771604536, guid: b26c4a65cf4c6475a92bfd03c2c3282b,
         type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5504017617541946360, guid: b26c4a65cf4c6475a92bfd03c2c3282b,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -10036,7 +10046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 11400000, guid: 0a303873d18554230a20fd04ce14618d, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 2fcedf774c6fc48adb9bf47668d1e0c0, type: 2}
   isGlobal: 1
   blendDistance: 0
   weight: 1
@@ -14377,7 +14387,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -9116393239106031902, guid: fcc71635aab95ff4fbdf1880bf2afa2f,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 62dd20471e2254562ba8508b1db766cd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 668c1f960c4e747f9bd6f077f1aee157, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.4
   m_Pitch: 1
